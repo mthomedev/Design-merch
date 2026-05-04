@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A UI/UX project focused on minimalist and clean design, built with pure HTML and CSS."
+    />
+    <title>Design Merch — UI/UX Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header" id="home">
+      <!-- Decorative background blobs -->
+      <div class="bg-blob blob-1" aria-hidden="true"></div>
+      <div class="bg-blob blob-2" aria-hidden="true"></div>
+      <div class="bg-blob blob-3" aria-hidden="true"></div>
+
+      <!-- Navigation -->
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#home" class="logo" aria-label="Go to homepage">
+          <img
+            src="https://img.icons8.com/?size=100&id=30248&format=png&color=ffffff"
+            alt="Lightning icon"
+            class="logo__img"
+          />
+          <span class="logo__text">Design<em>Merch</em></span>
+        </a>
+
+        <div class="nav__right">
+          <!-- Language switcher -->
+          <div
+            class="lang-switcher"
+            id="lang-switcher"
+            aria-label="Language switcher"
+          >
+            <button
+              class="lang-btn"
+              id="lang-btn"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="lang-btn__globe" aria-hidden="true">🌐</span>
+              <span class="lang-btn__label" id="lang-label">EN</span>
+              <span class="lang-btn__caret" aria-hidden="true">▾</span>
+            </button>
+            <ul
+              class="lang-dropdown"
+              id="lang-dropdown"
+              role="listbox"
+              aria-label="Select language"
+            >
+              <li
+                role="option"
+                data-lang="en"
+                class="lang-option lang-option--active"
+                aria-selected="true"
+              >
+                🇺🇸 English
+              </li>
+              <li
+                role="option"
+                data-lang="pt"
+                class="lang-option"
+                aria-selected="false"
+              >
+                🇧🇷 Português
+              </li>
+              <li
+                role="option"
+                data-lang="es"
+                class="lang-option"
+                aria-selected="false"
+              >
+                🇪🇸 Español
+              </li>
+              <li
+                role="option"
+                data-lang="fr"
+                class="lang-option"
+                aria-selected="false"
+              >
+                🇫🇷 Français
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="nav__toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <ul class="nav__links" id="nav-links" role="list">
+          <li>
+            <a
+              href="#home"
+              class="nav__link nav__link--active"
+              data-i18n="nav.home"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#sobre" class="nav__link" data-i18n="nav.about">About</a>
+          </li>
+          <li>
+            <a href="#feedback" class="nav__link" data-i18n="nav.contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero__badge" data-i18n="hero.badge">✦ UI/UX Exercise</div>
+        <h1 class="hero__title">
+          <span data-i18n="hero.title1">A Minimal</span><br />
+          <em data-i18n="hero.title2">and Clean</em><br />
+          <span data-i18n="hero.title3">Layout.</span>
+        </h1>
+        <p class="hero__desc" data-i18n="hero.desc">
+          A project developed as a UI/UX exercise, exploring visual hierarchy,
+          intuitive navigation and aesthetic lightness. Built with pure HTML and
+          CSS.
+        </p>
+        <div class="hero__actions">
+          <a href="#feedback" class="btn btn--primary" data-i18n="hero.cta"
+            >Get Started →</a
+          >
+          <a href="#sobre" class="btn btn--ghost" data-i18n="hero.secondary"
+            >Learn more</a
+          >
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-hint__line"></span>
+        <span class="scroll-hint__text" data-i18n="scroll">scroll</span>
+      </div>
+    </header>
+
+    <section class="section sobre" id="sobre">
+      <div class="container">
+        <div class="section__label" data-i18n="about.label">
+          — About the project
+        </div>
+        <h2 class="section__title" data-i18n="about.title">
+          Applied learnings
+        </h2>
+        <p class="section__subtitle" data-i18n="about.subtitle">
+          Each technology used in this project played a key role in building a
+          cohesive and functional visual experience.
+        </p>
+
+        <ul class="skills-grid" role="list">
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">🏗️</span>
+            <h3 class="skill-card__name">HTML</h3>
+            <p class="skill-card__desc" data-i18n="skills.html">
+              Semantic structure, accessibility and markup best practices.
+            </p>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">🎨</span>
+            <h3 class="skill-card__name">CSS</h3>
+            <p class="skill-card__desc" data-i18n="skills.css">
+              Variables, Flexbox, Grid, animations and mobile-first
+              responsiveness.
+            </p>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">🖼️</span>
+            <h3 class="skill-card__name" data-i18n="skills.design.name">
+              Design
+            </h3>
+            <p class="skill-card__desc" data-i18n="skills.design">
+              Visual composition, spacing, typography and element hierarchy.
+            </p>
+          </li>
+          <li class="skill-card">
+            <span class="skill-card__icon" aria-hidden="true">🧭</span>
+            <h3 class="skill-card__name">UI/UX</h3>
+            <p class="skill-card__desc" data-i18n="skills.uiux">
+              Navigation flow, visual feedback and user-centered experience.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section feedback-section" id="feedback">
+      <div class="container feedback-section__inner">
+        <div class="feedback-section__copy">
+          <div class="section__label" data-i18n="feedback.label">
+            — Share your thoughts
+          </div>
+          <h2 class="section__title" data-i18n="feedback.title">
+            What did you think?
+          </h2>
+          <p class="section__subtitle" data-i18n="feedback.subtitle">
+            Your feedback is essential to keep improving. Share what worked and
+            what could be better.
+          </p>
+          <ul class="feedback-section__stats" role="list">
+            <li>
+              <strong>4</strong>
+              <span data-i18n="stats.tech">technologies</span>
+            </li>
+            <li>
+              <strong>100%</strong> <span data-i18n="stats.css">pure CSS</span>
+            </li>
+            <li>
+              <strong>∞</strong>
+              <span data-i18n="stats.learning">learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <form id="feedback-form" novalidate>
+            <div class="form-group">
+              <label for="bom" class="form-label">
+                <span class="form-label__icon" aria-hidden="true">👍</span>
+                <span data-i18n="form.liked">What did you like most?</span>
+              </label>
+              <input
+                type="text"
+                id="bom"
+                name="positivo"
+                class="form-input"
+                data-i18n-placeholder="form.liked.placeholder"
+                placeholder="e.g. the color palette, the typography..."
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mal" class="form-label">
+                <span class="form-label__icon" aria-hidden="true">💡</span>
+                <span data-i18n="form.improve">What could be improved?</span>
+              </label>
+              <input
+                type="text"
+                id="mal"
+                name="negativo"
+                class="form-input"
+                data-i18n-placeholder="form.improve.placeholder"
+                placeholder="e.g. responsiveness, animations..."
+                autocomplete="off"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn--primary btn--full"
+              data-i18n="form.submit"
+            >
+              Send feedback →
+            </button>
+
+            <p
+              class="form-success"
+              id="form-success"
+              aria-live="polite"
+              role="status"
+              hidden
+              data-i18n="form.success"
+            >
+              ✓ Thank you for your feedback!
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <a href="#home" class="logo logo--small" aria-label="Back to top">
+          <img
+            src="https://img.icons8.com/?size=100&id=30248&format=png&color=ffffff"
+            alt="Lightning icon"
+            class="logo__img"
+          />
+          <span class="logo__text">Design<em>Merch</em></span>
+        </a>
+        <p class="site-footer__copy" data-i18n="footer.copy">
+          Made with HTML &amp; CSS · UI/UX Exercise
+        </p>
+        <nav aria-label="Footer links">
+          <ul class="site-footer__links" role="list">
+            <li>
+              <a href="#home" class="nav__link" data-i18n="nav.home">Home</a>
+            </li>
+            <li>
+              <a href="#sobre" class="nav__link" data-i18n="nav.about">About</a>
+            </li>
+            <li>
+              <a href="#feedback" class="nav__link" data-i18n="nav.contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
